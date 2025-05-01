@@ -12,6 +12,16 @@ const mainLayer = {
   },
 };
 
+const highlightLayer = {
+  type: "line",
+  "source-layer": "main",
+  filter: ["in", "luky89", ["get", "username"]],
+  paint: {
+    "line-color": "#FF0000",
+    "line-width": 2,
+  },
+};
+
 function App() {
   return (
     <Map
@@ -34,6 +44,7 @@ function App() {
         attribution="© OpenInfraMap contributors"
       >
         <Layer {...mainLayer} />
+        <Layer {...highlightLayer} />
       </Source>
     </Map>
   );
