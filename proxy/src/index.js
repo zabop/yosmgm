@@ -22,7 +22,7 @@ export default {
 				const sourceUrl = `https://hel1.your-objectstorage.com/yosmgm/tiles/${zoom}/${x}/${y}.pbf`;
 
 				// Make the request to the Mapbox API
-				const mapboxResponse = await fetch(sourceUrl, {
+				const resp = await fetch(sourceUrl, {
 					method: request.method,
 					headers: {
 						'Content-Type': 'application/json',
@@ -31,10 +31,10 @@ export default {
 				});
 
 				// Return the Mapbox response to the client
-				return new Response(mapboxResponse.body, {
-					status: mapboxResponse.status,
+				return new Response(resp.body, {
+					status: resp.status,
 					headers: {
-						'content-type': mapboxResponse.headers.get('content-type'),
+						'content-type': resp.headers.get('content-type'),
 					},
 				});
 			} else {
