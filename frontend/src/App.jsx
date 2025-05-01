@@ -85,9 +85,7 @@ function App() {
         <Source
           id="mainLayer"
           type="vector"
-          tiles={[
-            "https://hel1.your-objectstorage.com/yosmgm/tiles/{z}/{x}/{y}.pbf",
-          ]}
+          tiles={["https://proxy.zabop.workers.dev/yosmgm/{z}/{x}/{y}"]}
           maxzoom={17}
           attribution="© OpenInfraMap contributors"
         >
