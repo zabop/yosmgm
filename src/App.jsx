@@ -42,6 +42,23 @@ function App() {
     },
   };
 
+  const symbolLayer = {
+    id: "username",
+    type: "symbol",
+    "source-layer": "main",
+    layout: {
+      "text-field": ["get", "username"],
+      "text-size": 12,
+      "symbol-placement": "line",
+      "text-anchor": "top",
+    },
+    paint: {
+      "text-color": "#000000",
+      "text-halo-color": "#ffffff",
+      "text-halo-width": 1,
+    },
+  };
+
   const highlightLayer = {
     type: "line",
     "source-layer": "main",
@@ -76,6 +93,7 @@ function App() {
         >
           <Layer {...mainLayer} />
           <Layer {...highlightLayer} />
+          <Layer {...symbolLayer} />
         </Source>
       </Map>
     </div>

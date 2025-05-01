@@ -1,6 +1,7 @@
 export const basestyle = {
   version: 8,
   name: "OSM",
+  glyphs: "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
   sources: {
     osm: {
       type: "raster",
