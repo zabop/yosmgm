@@ -35,7 +35,7 @@ export default {
 					status: resp.status,
 					headers: {
 						'content-type': resp.headers.get('content-type'),
-						'Access-Control-Allow-Origin': 'https://zabop.github.io', // Allow requests from any origin
+						'Access-Control-Allow-Origin': 'https://zabop.github.io',
 						'Access-Control-Allow-Methods': 'GET',
 					},
 				});
