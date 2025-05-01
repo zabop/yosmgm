@@ -35,6 +35,8 @@ export default {
 					status: resp.status,
 					headers: {
 						'content-type': resp.headers.get('content-type'),
+						'Access-Control-Allow-Origin': '*', // Allow requests from any origin
+						'Access-Control-Allow-Methods': 'GET',
 					},
 				});
 			} else {
