@@ -31,7 +31,7 @@ const InputField = ({ inputValue, setInputValue }) => {
 };
 
 function App() {
-  const [inputValue, setInputValue] = useState(null);
+  const [inputValue, setInputValue] = useState("");
 
   const mainLayer = {
     type: "line",
@@ -45,7 +45,7 @@ function App() {
   const highlightLayer = {
     type: "line",
     "source-layer": "main",
-    filter: ["in", inputValue, ["get", "username"]],
+    filter: ["in", "|" + inputValue + "|", ["get", "username"]],
     paint: {
       "line-color": "#FF0000",
       "line-width": 2,
